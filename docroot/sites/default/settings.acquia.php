@@ -1,6 +1,6 @@
 <?php
 
-$acquia_site_name = 'paragondev';
+$acquia_site_name = 'acquiadeploy';
 if (file_exists('/var/www/site-php')) {
   require("/var/www/site-php/{$acquia_site_name}/{$acquia_site_name}-settings.inc");
 }
@@ -23,6 +23,10 @@ $config['system.performance']['js']['preprocess'] = TRUE;
 
 // Set GTM Code default
 $config['google_tag.settings']['container_id'] = '';
+
+//User and password
+$config['shield.settings']['credentials']['shield']['user']  = 'root';
+$config['shield.settings']['credentials']['shield']['pass'] = 'root';
 
 /**
  * Environment Indicator Settings.

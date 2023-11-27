@@ -10,7 +10,7 @@ $settings['config_sync_directory'] = '../config/default';
 /**
  * Hash salt used for one-time login links, etc.
  */
-$settings['hash_salt'] = '';
+$settings['hash_salt'] = '-f4rQDNI36-DxWj88Or-2HtPR3h1xwUJCxCGupOy5ocgRJdf7OxbL8A-8740CiOGsyBkF7CFhQ';
 
 /**
  * Access control for update.php script.
@@ -111,3 +111,15 @@ elseif(isset($_ENV['LANDO_APP_NAME'])) {
 if(file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
   include $app_root . '/' . $site_path . '/settings.local.php';
 }
+$databases['default']['default'] = array (
+  'database' => 'testdb',
+  'username' => 'root',
+  'password' => '',
+  'prefix' => '',
+  'host' => 'database',
+  'port' => '3306',
+  'isolation_level' => 'READ COMMITTED',
+  'namespace' => 'Drupal\\mysql\\Driver\\Database\\mysql',
+  'driver' => 'mysql',
+  'autoload' => 'core/modules/mysql/src/Driver/Database/mysql/',
+);

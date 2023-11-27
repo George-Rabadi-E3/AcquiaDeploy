@@ -1,9 +1,9 @@
 <?php return array(
     'root' => array(
         'name' => 'elevatedthird/paragon-base',
-        'pretty_version' => '3.0.0',
-        'version' => '3.0.0.0',
-        'reference' => NULL,
+        'pretty_version' => 'dev-master',
+        'version' => 'dev-master',
+        'reference' => 'c6b209eeaf3635c4931caf613a14a8abf212b7cb',
         'type' => 'project',
         'install_path' => __DIR__ . '/../../',
         'aliases' => array(),
@@ -292,6 +292,24 @@
             'reference' => '63fee8c33bef740db6730eb2a750cd3da6495603',
             'type' => 'library',
             'install_path' => __DIR__ . '/../doctrine/persistence',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'drupal/acquia_connector' => array(
+            'pretty_version' => '4.0.5',
+            'version' => '4.0.5.0',
+            'reference' => '4.0.5',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../docroot/modules/contrib/acquia_connector',
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
+        'drupal/acquia_purge' => array(
+            'pretty_version' => '1.3.0',
+            'version' => '1.3.0.0',
+            'reference' => '8.x-1.3',
+            'type' => 'drupal-module',
+            'install_path' => __DIR__ . '/../../docroot/modules/contrib/acquia_purge',
             'aliases' => array(),
             'dev_requirement' => false,
         ),
@@ -1086,6 +1104,15 @@
             'aliases' => array(),
             'dev_requirement' => false,
         ),
+        'drupal/purge_queuer_coretags' => array(
+            'pretty_version' => '3.5.0',
+            'version' => '3.5.0.0',
+            'reference' => NULL,
+            'type' => 'metapackage',
+            'install_path' => NULL,
+            'aliases' => array(),
+            'dev_requirement' => false,
+        ),
         'drupal/quicklink' => array(
             'pretty_version' => '2.0.2',
             'version' => '2.0.2.0',
@@ -1321,9 +1348,9 @@
             'dev_requirement' => false,
         ),
         'elevatedthird/paragon-base' => array(
-            'pretty_version' => '3.0.0',
-            'version' => '3.0.0.0',
-            'reference' => NULL,
+            'pretty_version' => 'dev-master',
+            'version' => 'dev-master',
+            'reference' => 'c6b209eeaf3635c4931caf613a14a8abf212b7cb',
             'type' => 'project',
             'install_path' => __DIR__ . '/../../',
             'aliases' => array(),
@@ -1620,8 +1647,8 @@
         'psr/container-implementation' => array(
             'dev_requirement' => false,
             'provided' => array(
-                0 => '1.1|2.0',
-                1 => '^1.0',
+                0 => '^1.0',
+                1 => '1.1|2.0',
             ),
         ),
         'psr/event-dispatcher' => array(

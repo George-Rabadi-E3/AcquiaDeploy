@@ -1,4 +1,4 @@
-name: paragon
+name: acquiadeploy
 recipe: drupal10
 config:
   webroot: docroot

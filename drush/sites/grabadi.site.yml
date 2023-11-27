@@ -1,0 +1,48 @@
+# Application 'grabadi', environment 'dev'.
+dev:
+  root: /var/www/html/grabadi.dev/docroot
+  ac-site: grabadi
+  ac-env: dev
+  ac-realm: devcloud
+  uri: grabadiulqggcmwoe.devcloud.acquia-sites.com
+  dev.livedev:
+    parent: '@grabadi.dev'
+    root: /mnt/gfs/grabadi.dev/livedev/docroot
+  host: grabadiulqggcmwoe.ssh.devcloud.acquia-sites.com
+  user: grabadi.dev
+  paths:
+    drush-script: drush9
+
+
+# Application 'grabadi', environment 'prod'.
+prod:
+  root: /var/www/html/grabadi.prod/docroot
+  ac-site: grabadi
+  ac-env: prod
+  ac-realm: devcloud
+  uri: grabadikblqntnrcq.devcloud.acquia-sites.com
+  prod.livedev:
+    parent: '@grabadi.prod'
+    root: /mnt/gfs/grabadi.prod/livedev/docroot
+  host: grabadikblqntnrcq.ssh.devcloud.acquia-sites.com
+  user: grabadi.prod
+  paths:
+    drush-script: drush9
+
+
+# Application 'grabadi', environment 'test'.
+test:
+  root: /var/www/html/grabadi.test/docroot
+  ac-site: grabadi
+  ac-env: test
+  ac-realm: devcloud
+  uri: grabadiprauoctk24.devcloud.acquia-sites.com
+  test.livedev:
+    parent: '@grabadi.test'
+    root: /mnt/gfs/grabadi.test/livedev/docroot
+  host: grabadiprauoctk24.ssh.devcloud.acquia-sites.com
+  user: grabadi.test
+  paths:
+    drush-script: drush9
+
+
