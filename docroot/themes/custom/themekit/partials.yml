@@ -1,0 +1,36 @@
+layout:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/layout.css: {}
+node--type--article:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/node--type--article.css: {}
+node--view-mode--full:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/node--view-mode--full.css: {}
+region--footer:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/region--footer.css: {}
+region--header:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/region--header.css: {}
+user:
+  dependencies:
+    - themekit/themekit
+  css:
+    theme:
+      dist/css/user.css: {}

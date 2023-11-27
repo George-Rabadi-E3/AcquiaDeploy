@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: aTitfYQDb9bmMR7R6NBQUqRplIbNBKX4f4X-3-FYtR0
+shield_enable: true
+credential_provider: shield
+credentials:
+  shield:
+    user: paragon
+    pass: 3ditParagon
+allow_cli: true
+print: ''
+whitelist: ''

@@ -1,0 +1,11 @@
+_core:
+  default_config_hash: 00Ve-7RV1jZNtJ9aLejN8IxPwcAWXhYlnBkS-1Rfwe8
+first_day: 0
+country:
+  default: US
+timezone:
+  default: America/Denver
+  user:
+    configurable: true
+    default: 0
+    warn: false

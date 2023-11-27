@@ -1,0 +1,53 @@
+uuid: fff3199a-3464-427b-89a1-f3af4889bbf5
+langcode: en
+status: true
+dependencies:
+  module:
+    - editor
+    - linkit
+_core:
+  default_config_hash: bGmzFaKsyGu7NZTZ7erXIgId1dMucmGopXSPz5vF2Zo
+name: 'Basic HTML'
+format: basic_html
+weight: 0
+filters:
+  filter_html:
+    id: filter_html
+    provider: filter
+    status: true
+    weight: -10
+    settings:
+      allowed_html: '<br> <p> <cite> <span> <a hreflang accesskey id rel target title data-entity-type data-entity-uuid data-entity-substitution href> <strong> <em>'
+      filter_html_help: false
+      filter_html_nofollow: false
+  filter_align:
+    id: filter_align
+    provider: filter
+    status: false
+    weight: 7
+    settings: {  }
+  filter_caption:
+    id: filter_caption
+    provider: filter
+    status: false
+    weight: 8
+    settings: {  }
+  editor_file_reference:
+    id: editor_file_reference
+    provider: editor
+    status: false
+    weight: 11
+    settings: {  }
+  linkit:
+    id: linkit
+    provider: linkit
+    status: true
+    weight: -11
+    settings:
+      title: false
+  filter_image_lazy_load:
+    id: filter_image_lazy_load
+    provider: filter
+    status: true
+    weight: 12
+    settings: {  }

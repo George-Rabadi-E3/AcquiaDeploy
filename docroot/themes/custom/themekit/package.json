@@ -1,0 +1,69 @@
+{
+  "name": "themekit",
+  "version": "1.0.0",
+  "description": "Starter drupal theme.",
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "find node_modules/ -name '*.info' -type f -delete",
+    "build": "rm -rf dist; node tools/library-generation.js; webpack --config tools/webpack.config.js --mode=production && sassdoc global/sass/**/*.scss --config sassdoc.config.yml",
+    "dev": "node tools/library-generation.js; webpack --config tools/webpack.config.js --watch --mode=development; drush cr"
+  },
+  "author": "Elevated Third",
+  "license": "ISC",
+  "browserslist": [
+    "last 1 version",
+    "> 1%",
+    "IE 11"
+  ],
+  "sideEffects": false,
+  "devDependencies": {
+    "@babel/core": "^7.19",
+    "@babel/plugin-proposal-class-properties": "^7.18",
+    "@babel/preset-env": "^7.19",
+    "autoprefixer": "^10.4",
+    "babel-loader": "^8.2.2",
+    "babel-plugin-array-includes": "^2.0.3",
+    "browser-sync": "^2.26.14",
+    "browser-sync-webpack-plugin": "^2.3.0",
+    "chalk": "^5.0",
+    "css-loader": "^6.7",
+    "eslint": "^8.23",
+    "eslint-config-airbnb-base": "^15.0",
+    "eslint-plugin-import": "^2.20.0",
+    "file-loader": "^6.2.0",
+    "glob": "^8.0",
+    "js-yaml": "^4.0.0",
+    "mini-css-extract-plugin": "^2.6",
+    "postcss-loader": "^7.0",
+    "postcss-safe-parser": "^6.0",
+    "postcss-scss": "^4.0",
+    "sass": "^1.54.8",
+    "sass-loader": "^13.0",
+    "sassdoc": "^2.7",
+    "webpack": "^5.74",
+    "webpack-cli": "^4.10",
+    "webpack-fix-style-only-entries": "^0.6.1",
+    "write-yaml": "^1.0.0"
+  },
+  "dependencies": {
+    "ajv": "^8.11",
+    "ajv-keywords": "^5.1",
+    "eslint-import-resolver-webpack": "^0.13.0",
+    "eslint-webpack-plugin": "^3.2.0",
+    "foundation-sites": "^6.7",
+    "jquery": "^3.6",
+    "lodash.get": "^4.4.2",
+    "lodash.merge": "^4.6.2",
+    "lodash.set": "^4.3.2",
+    "normalize-scss": "^7.0.1",
+    "slick-carousel": "^1.8.1",
+    "svg.js": "^2.6.5",
+    "webpack-remove-empty-scripts": "^0.8.3",
+    "what-input": "^5.2.10"
+  }
+}

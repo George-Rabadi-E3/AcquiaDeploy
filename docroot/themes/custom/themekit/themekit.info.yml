@@ -1,0 +1,39 @@
+name: Themekit
+type: theme
+description: A subtheme of Classy, this is the intended starter theme the Paragon distribution of Drupal 8.
+core_version_requirement: ^8 || ^9 || ^10
+# Defines the base theme
+base theme: classy
+
+ckeditor_stylesheets:
+  - dist/wysiwyg.css
+
+libraries:
+  - core/Drupal
+  - themekit/base
+# I added some extra namespaces which can be named anything you like
+components:
+  namespaces:
+    partials: partials
+    atoms: partials/_components/00_atoms
+    molecules: partials/_components/01_molecules
+    organisms: partials/_components/02_organisms
+    templates: partials/_components/03_templates
+    pages: partials/_components/04_pages
+
+regions:
+  header: Header
+  help: Help
+  page_top: 'Page top'
+  page_bottom: 'Page bottom'
+  highlighted: Highlighted
+  featured: Featured
+  content: Content
+  sidebar_first: 'Sidebar first'
+  sidebar_second: 'Sidebar second'
+  footer: Footer
+
+# Information added by Drupal.org packaging script on 2023-06-24
+version: '8.x-1.0-alpha21'
+project: 'paragon_themekit'
+datestamp: 1687625864

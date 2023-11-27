@@ -1,0 +1,246 @@
+{
+  "name": "elevatedthird/paragon-base",
+  "description": "A Composer-based installation template for the Paragon Drupal 8 Distribution",
+  "type": "project",
+  "license": "GPL-2.0-or-later",
+  "authors": [
+    {
+      "name": "Elevated Third",
+      "email": "info@elevatedthird.com"
+    }
+  ],
+  "repositories": [
+    {
+      "type": "composer",
+      "url": "https://packages.drupal.org/8"
+    },
+    {
+      "type": "composer",
+      "url": "https://asset-packagist.org"
+    }
+  ],
+  "require-dev": {
+    "drupal/drupal-extension": "~5.0"
+  },
+  "require": {
+    "bower-asset/chosen": "^1.8",
+    "bower-asset/lazysizes": "^5.2",
+    "composer/installers": "^1.10",
+    "cweagans/composer-patches": "~1.0",
+    "drupal/address": "^1.0",
+    "drupal/admin_toolbar": "^3.0",
+    "drupal/advagg": "^6.0@alpha",
+    "drupal/allowed_formats": "^2.0",
+    "drupal/backup_migrate": "^5.0",
+    "drupal/better_exposed_filters": "^6.0",
+    "drupal/block_field": "^1.0@RC",
+    "drupal/chosen": "^4.0",
+    "drupal/classy": "^1.0",
+    "drupal/components": "^3.0@beta",
+    "drupal/composer_deploy": "^1.7",
+    "drupal/config_update": "^2.0@alpha",
+    "drupal/core": "10.1.0",
+    "drupal/core-composer-scaffold": "~10.0.8",
+    "drupal/csv_serialization": "^3.0",
+    "drupal/devel": "^5.0",
+    "drupal/embed": "^1.0",
+    "drupal/entity": "^1.0",
+    "drupal/entity_browser": "^2.9",
+    "drupal/entity_embed": "1.x-dev",
+    "drupal/environment_indicator": "~4.0.0",
+    "drupal/fast_404": "^3.0@alpha",
+    "drupal/field_group": "^3.0",
+    "drupal/field_tools": "^1.0@alpha",
+    "drupal/focal_point": "^2.0",
+    "drupal/gin": "^3.0@RC",
+    "drupal/gin_lb": "^1.0@RC",
+    "drupal/gtm": "^1.6",
+    "drupal/http_cache_control": "^2.0",
+    "drupal/imageapi_optimize": "~4.0.0",
+    "drupal/imageapi_optimize_gd": "^2.0",
+    "drupal/imageapi_optimize_webp": "^2.0",
+    "drupal/inline_block_title_automatic": "^1.0",
+    "drupal/inline_entity_form": "^1.0",
+    "drupal/layout_builder_browser": "^1.0",
+    "drupal/layout_builder_modal": "^1.0",
+    "drupal/layout_builder_operation_link": "^2.0",
+    "drupal/layout_builder_restrictions": "^2.0",
+    "drupal/lazy": "^3.x-dev",
+    "drupal/link_attributes": "^1.0",
+    "drupal/linkit": "^6.1@RC",
+    "drupal/login_security": "^2.0",
+    "drupal/mailsystem": "^4.0",
+    "drupal/markup": "^2.0",
+    "drupal/media_responsive_thumbnail": "^1.0",
+    "drupal/memcache": "^2.0",
+    "drupal/menu_block": "^1.0",
+    "drupal/metatag": "^1.0",
+    "drupal/name": "^1.0",
+    "drupal/paragon_core": "1.0.x-dev",
+    "drupal/paragon_gin": "1.0.x-dev",
+    "drupal/paragon_themekit": "^1.0@alpha",
+    "drupal/paragraphs": "^1.0",
+    "drupal/paragraphs_browser": "^1.0",
+    "drupal/path_redirect_import": "^2.0",
+    "drupal/pathauto": "^1.0",
+    "drupal/purge": "^3.0@beta",
+    "drupal/quicklink": "^2.0",
+    "drupal/redirect": "^1.0",
+    "drupal/robotstxt": "^1.4",
+    "drupal/scheduler": "^2.0@RC",
+    "drupal/scheduler_content_moderation_integration": "^2.0",
+    "drupal/search_api": "^1.0",
+    "drupal/search_api_solr": "^4.0",
+    "drupal/seckit": "~2.0.0@RC",
+    "drupal/security_review": "^2.0",
+    "drupal/shield": "^1.0",
+    "drupal/simple_sitemap": "^4.0",
+    "drupal/site_settings": "^1.0",
+    "drupal/sitemap": "^2.0@beta",
+    "drupal/smart_trim": "^2.0",
+    "drupal/svg_image_field": "^2.0",
+    "drupal/svg_upload_sanitizer": "^1.0@alpha",
+    "drupal/swiftmailer": "^2.0",
+    "drupal/twig_field_value": "~2.0.0",
+    "drupal/ultimate_cron": "^2.0",
+    "drupal/username_enumeration_prevention": "^1.1",
+    "drupal/views_bulk_edit": "^2.0",
+    "drupal/views_bulk_operations": "^4.0",
+    "drush/drush": "~11.0",
+    "npm-asset/jquery-ui-touch-punch": "dev-master",
+    "oomphinc/composer-installers-extender": "^2.0",
+    "symfony/css-selector": "~3.3",
+    "zaporylie/composer-drupal-optimizations": "^1.1"
+  },
+  "conflict": {
+    "drupal/drupal": "*"
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true,
+  "autoload": {
+    "classmap": [
+      "scripts/composer/ScriptHandler.php"
+    ]
+  },
+  "scripts": {
+    "pre-install-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+    ],
+    "pre-update-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::checkComposerVersion"
+    ],
+    "post-install-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::createRequiredDirectories",
+      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+      "DrupalProject\\composer\\ScriptHandler::removeGitSubmodules",
+      "DrupalProject\\composer\\ScriptHandler::themeStartkitCopy"
+    ],
+    "post-update-cmd": [
+      "DrupalProject\\composer\\ScriptHandler::createRequiredDirectories",
+      "DrupalProject\\composer\\ScriptHandler::createRequiredFiles",
+      "DrupalProject\\composer\\ScriptHandler::removeGitSubmodules",
+      "DrupalProject\\composer\\ScriptHandler::themeStartkitCopy"
+    ]
+  },
+  "extra": {
+    "installer-types": [
+      "bower-asset",
+      "npm-asset"
+    ],
+    "installer-paths": {
+      "docroot/core": ["type:drupal-core"],
+      "docroot/libraries/{$name}": [
+        "type:drupal-library",
+        "type:bower-asset",
+        "type:npm-asset"
+      ],
+      "docroot/modules/contrib/{$name}": ["type:drupal-module"],
+      "docroot/profiles/contrib/{$name}": ["type:drupal-profile"],
+      "docroot/themes/contrib/{$name}": ["type:drupal-theme"],
+      "drush/contrib/{$name}": ["type:drupal-drush"]
+    },
+    "enable-patching": true,
+    "drupal-scaffold": {
+      "locations": {
+        "web-root": "./docroot"
+      },
+      "file-mapping": {
+        "[web-root]/robots.txt": false,
+        "[web-root]/.htaccess": {
+          "mode": "replace",
+          "path": "assets/scaffold/files/htaccess",
+          "overwrite": false
+        },
+        "[web-root]/.editorconfig": {
+          "mode": "replace",
+          "path": "assets/scaffold/files/editorconfig",
+          "overwrite": false
+        },
+        "[web-root]/.gitattributes": {
+          "mode": "replace",
+          "path": "assets/scaffold/files/gitattributes",
+          "overwrite": false
+        },
+        "[web-root]/sites/default/services.php": {
+          "mode": "replace",
+          "path": "assets/scaffold/files/default.services.yml",
+          "overwrite": false
+        },
+        "[web-root]/sites/default/local.services.yml": {
+          "mode": "replace",
+          "path": "assets/scaffold/files/local.services.yml",
+          "overwrite": false
+        },
+        "[web-root]/sites/default/cloud-memcache-d8+.php": {
+          "mode": "replace",
+          "path": "assets/scaffold/files/cloud-memcache-d8+.php",
+          "overwrite": false
+        },
+        "[web-root]/sites/default/settings.acquia.php": {
+          "mode": "replace",
+          "path": "assets/scaffold/files/settings.acquia.php",
+          "overwrite": false
+        },
+        "[web-root]/sites/default/settings.lando.php": {
+          "mode": "replace",
+          "path": "assets/scaffold/files/settings.lando.php",
+          "overwrite": false
+        },
+        "[web-root]/sites/default/settings.fast404.php": {
+          "mode": "replace",
+          "path": "assets/scaffold/files/settings.fast404.php",
+          "overwrite": false
+        },
+        "[web-root]/sites/default/settings.php": {
+          "mode": "replace",
+          "path": "assets/scaffold/files/settings.php",
+          "overwrite": false
+        }
+      }
+    },
+    "composer-exit-on-patch-failure": true,
+    "patchLevel": {
+      "drupal/core": "-p2"
+    },
+    "patches": {
+      "drupal/core":{
+        "Field Groups marked as required are missing red asterisk": "https://www.drupal.org/files/issues/2022-11-08/3171835-53.patch"
+      },
+      "drupal/paragraphs": {
+        "Affix correct langcode to paragraph in layout builder": "https://www.drupal.org/files/issues/2020-06-25/paragraphs-2901390-51.patch",
+        "Paragraphs do not render: access check for 'view' fail when using layout builder + custom blocks & content revisions because the incorrect parent revision ID is being passed in ParagraphAccessControlHandler::checkAccess(": "https://www.drupal.org/files/issues/2020-07-08/access-controll-issue-3090200-22.patch"
+      }
+    }
+  },
+  "config": {
+    "sort-packages": true,
+    "platform-check": false,
+    "allow-plugins": {
+      "composer/installers": true,
+      "cweagans/composer-patches": true,
+      "drupal/core-composer-scaffold": true,
+      "oomphinc/composer-installers-extender": true,
+      "zaporylie/composer-drupal-optimizations": true
+    }
+  }
+}
